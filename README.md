@@ -1,9 +1,9 @@
-# \[Group name\]
+# Alfred Stage, Jesper Petersen, Linda Zou
 
 **Group members:**
-- A
-- B
-- C
+- Alfred Alexander Jarlner Stage (rhj641)
+- Jesper Bork Petersen ()
+- Linda Zou
 
 This repository contains  
 1. Inaugural project. 
