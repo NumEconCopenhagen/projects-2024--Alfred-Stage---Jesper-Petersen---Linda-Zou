@@ -1,5 +1,8 @@
 # Inaugural project
 
-The **results** of the project can be seen from running [inauguralproject.ipynb](inauguralproject.ipynb).
-
-**Dependencies:** Apart from a standard Anaconda Python 3 installation, the project requires no further packages.
+"""
+The inauguaral project is based on an exhange economy between two consumers, who trades their endowments in order to maximize their own utility. In order to see how consumer A and B behave, we have observed differences in their behaviour under different assumptions.
+"""
+""
+Note: Everything should be able to run without any additional downloads of function packages
+""
