@@ -3,7 +3,7 @@
 **Group members:**
 - Alfred Alexander Jarlner Stage (rhj641)
 - Jesper Bork Petersen ()
-- Linda Zou
+- Yiran Zou (vrp628)
 
 This repository contains  
 1. Inaugural project. 
