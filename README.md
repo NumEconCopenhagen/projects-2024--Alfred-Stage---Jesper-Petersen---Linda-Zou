@@ -2,7 +2,7 @@
 
 **Group members:**
 - Alfred Alexander Jarlner Stage (rhj641)
-- Jesper Bork Petersen ()
+- Jesper Bork Petersen (kwf929)
 - Yiran Zou (vrp628)
 
 This repository contains  
