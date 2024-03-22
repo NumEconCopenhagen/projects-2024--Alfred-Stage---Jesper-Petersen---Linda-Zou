@@ -500,7 +500,7 @@ class ExchangeEconomyClass:
                 x1B = w1bar - x1A
                 x2B = w2bar - x2A
                 if self.utility_A(x1A, x2A) >= initial_utility_A and self.utility_B(x1B, x2B) >= initial_utility_B:
-                    ax_A.scatter(x1A, x2A, color='blue', alpha=0.2, s=1)  # Adjust size and alpha as needed
+                    ax_A.scatter(x1A, x2A, color='blue', alpha=0.2, s=1)  
 
         # Overlay each scenario's allocations from self.comparison_results
         colors = iter(['red', 'green', 'blue', 'purple', 'orange', 'cyan'])  # Define a list of colors for different scenarios
