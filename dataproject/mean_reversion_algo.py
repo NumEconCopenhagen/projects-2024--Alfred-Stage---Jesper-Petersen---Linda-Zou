@@ -256,4 +256,35 @@ class MeanReversionAlgo:
         self.plot_results()
         print("Analysis complete.")
 
+    def calculate_segmented_correlation(self, index_condition=None, category_condition=None):
+            if not hasattr(self, 'merged_df') or self.merged_df.empty:
+                print("Error: Analysis data not found or empty.")
+                return
 
+            df = self.merged_df.copy()  # Work on a copy of the merged DataFrame
+
+            # Apply index condition if specified
+            if index_condition == 'up':
+                df = df[df['Index Performance'] > 0]
+            elif index_condition == 'down':
+                df = df[df['Index Performance'] < 0]
+
+            # Apply category condition if specified
+            if category_condition:
+                column_type = 'Win %' if category_condition['type'] == 'winner' else 'Loss %'
+                lower_threshold, upper_threshold = category_condition.get('thresholds', (None, None))
+
+                # Apply threshold filters
+                if lower_threshold is not None:
+                    df = df[df[column_type] >= lower_threshold]
+                if upper_threshold is not None:
+                    df = df[df[column_type] <= upper_threshold]
+
+            # Ensure there's enough varied data for correlation calculation
+            if len(df) >= 2 and df[column_type].nunique() > 1:
+                # Assuming 'Next Day Change % (Winner)' or 'Next Day Change % (Loser)' as y_col based on condition
+                y_col = 'Next Day Change % (Winner)' if category_condition['type'] == 'winner' else 'Next Day Change % (Loser)'
+                correlation, p_value = scipy.stats.pearsonr(df[column_type], df[y_col])
+                print(f"Correlation: {correlation:.3f}, P-value: {p_value:.3g}, Sample size: {len(df)}")
+            else:
+                print("Insufficient or non-varied data for correlation calculation.")
