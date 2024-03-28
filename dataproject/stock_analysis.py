@@ -27,3 +27,44 @@ def plot_return_series(returns_series):
     plt.ylabel("Next Day Return (%)")
     plt.grid(True)
     plt.show()
+
+
+def kelly_fraction(win_prob, win_loss_ratio):
+    if win_loss_ratio > 0:  # To avoid division by zero
+        return max((win_prob * win_loss_ratio - (1 - win_prob)) / win_loss_ratio, 0)
+    else:
+        return 0
+
+def calculate_win_loss_ratios(stock_data):
+    wins = stock_data[stock_data['Next Day Return'] > 0]
+    losses = stock_data[stock_data['Next Day Return'] <= 0]
+    win_prob = len(wins) / len(stock_data) if len(stock_data) > 0 else 0
+    average_win = wins['Next Day Return'].mean() if len(wins) > 0 else 0
+    average_loss = losses['Next Day Return'].mean() if len(losses) > 0 else 0
+    win_loss_ratio = abs(average_win / average_loss) if average_loss != 0 else 0
+    return win_prob, win_loss_ratio
+
+# Backtesting function using the Kelly Criterion
+def backtest_kelly_strategy(stock_data, initial_capital, max_risk, risk_per_trade, kelly_fractional):
+    portfolio_values = [initial_capital]
+    capital = initial_capital
+
+    win_prob, win_loss_ratio = calculate_win_loss_ratios(stock_data[stock_data['Trading Signal']])
+
+    for index, row in stock_data.iterrows():
+        if row['Trading Signal']:
+            kelly_f = kelly_fraction(win_prob, win_loss_ratio) * kelly_fractional
+            # Trade size:
+            trade_size = min(kelly_f * capital, risk_per_trade * capital)
+            trade_size = min(trade_size, max_risk * initial_capital - capital)
+            
+            # Simulating
+            trade_outcome = trade_size * row['Next Day Return']
+            capital += trade_outcome
+            
+            # Risk constraint
+            capital = max(capital, initial_capital * (1 - max_risk))
+            
+        portfolio_values.append(capital)
+
+    return portfolio_values
