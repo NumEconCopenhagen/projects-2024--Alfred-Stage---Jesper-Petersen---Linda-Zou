@@ -1,14 +1,15 @@
 # Data analysis project
 
-Our project is titled **PROJECT TITLE** and is about EXPLAIN.
+Our project is titled **Mean Reversion** and is about a simple trading strategy that involves looking at today's stock market's biggest winners and losers - and assesing if it is profitable to bet on/against them.
 
-The **results** of the project can be seen from running [dataproject.ipynb](dataproject.ipynb).
+We take a couple of approaches. First we import three different indexes and extract winners and losers. We calculate probabilities - and allow the user to condition on "size of win/loss" as well as movements in the general index. 
+
+Then we look at the same problem, but from a different angle. Download historical data of a certain stock. Isolate negative movements > 5 pct. Trade with a "fractional kelly" stategy, that involves sizing out bets based on momentum. 
+
+The **results** of the project can be seen from running [dataproject.ipynb](dataproject.ipynb) using the pyfile trading_algo.
 
 We apply the **following datasets**:
 
-1. dataX.csv (*source*) 
-1. dataY.csv (*source*)
+yahoo finance stocks (we end up, incidentally, using two different APIs)
 
-**Dependencies:** Apart from a standard Anaconda Python 3 installation, the project requires the following installations:
-
-``pip install matplotlib-venn``
+**Dependencies:** Apart from a standard Anaconda Python 3 installation, the project shouldn't require any further installations. 
