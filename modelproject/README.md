@@ -1,7 +1,7 @@
 # Model analysis project
 
-Our project is titled **PROJECT TITLE** and is about EXPLAIN.
+Our model project is based on the "Solow Growth Model" for an open economy.
 
-The **results** of the project can be seen from running [modelproject.ipynb](modelproject.ipynb).
-
-**Dependencies:** Apart from a standard Anaconda Python 3 installation, the project requires no further packages.
+The project focuses on the transistion to steady state, development in underlying variables and the time to steady state. 
+Additionally, our project analysis what happens, when shocks in exogenous variables mean for the open economy. 
+Lastly, we have added a simple shock factor from nettoexports, which shows how the inflation rates, interest rates and exchange rates indirectly effect out steady state and convergence. 
