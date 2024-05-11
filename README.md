@@ -12,6 +12,6 @@ This repository contains
 2. Data project:
    Our data project is based on a mean reversion trading strategy, where we research the validity behind our strategy. Additionally, we have tested the two individual stocks          Alphabet and Cooper-Standard Holdings. Lastly, we have implmented a risk management strategy based on kelly fractional and backtested the usage. 
 
-3. Model project:
+3. Model project: **Download in order to see figures**
    The project focuses on the Solow Model for a open economy. We have simulated the convergence to steady state and the underlying variables, and introduces shocks to the economy    in order to see how the economy develops differently during shocks.
 
