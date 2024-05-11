@@ -1,8 +1,8 @@
 # Model analysis project
 
 **ATTENTION:** <br>
-ipywidgets shall be downloaded on computer in order to display figures. <br>
-Files need to be downloaded in order to see figures due to sliders! <br>
+- ipywidgets shall be downloaded on computer in order to display figures. <br>
+- Files need to be downloaded in order to see figures due to sliders! <br>
 
 
 Our model project is based on the "Solow Growth Model" for an open economy.
