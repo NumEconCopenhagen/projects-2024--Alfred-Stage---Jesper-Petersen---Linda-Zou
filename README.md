@@ -5,7 +5,7 @@
 - Jesper Bork Petersen (kwf929)
 - Yiran Zou (vrp628)
 
-This repository contains  
+**This repository contains**:  
 1. **Inaugural project:** <br>
    The inauguaral project is based on an exhange economy between two consumers, who trade their endowments in order to maximize their own utility. In order to see how consumer A     and B behave, we observed differences in their behaviour under different assumptions.
    
