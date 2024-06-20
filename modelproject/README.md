@@ -1,4 +1,4 @@
-# Model analysis project
+# Model Project
 
 **ATTENTION:** <br>
 - ipywidgets shall be downloaded on computer in order to display figures. <br>
