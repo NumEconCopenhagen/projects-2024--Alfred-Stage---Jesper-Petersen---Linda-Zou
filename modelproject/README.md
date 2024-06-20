@@ -13,6 +13,6 @@ Lastly, we have added a simple shock factor from nettoexports, which shows how t
 
 
 
-Our teaching assistant had trouble with the loadingtime of our widgets, but our (regular) computers were able to run the in less than 2 seconds. Please contact us if any problems occur. 
+Our teaching assistant had trouble with the loadingtime of our widgets, but our (regular) computers were able to run the code in less than 2 seconds. Please contact us if any problems occur. 
 
 
