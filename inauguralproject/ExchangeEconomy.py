@@ -657,3 +657,52 @@ class ExchangeEconomyClass:
         plt.legend(handles=legend_handles, labels=['Red dots = equilibria'], fontsize='small')
 
         plt.show()
+
+    def plot_contract_curve(self, initial_utility_A, initial_utility_B, equilibriums):
+        """
+        Plot the contract curve in an Edgeworth box diagram.
+
+        This method visualizes the initial endowment, all potential Pareto improvements, 
+        and the equilibrium allocations in an Edgeworth box for a given economic model.
+
+        Parameters:
+        initial_utility_A (float): The initial utility level for agent A.
+        initial_utility_B (float): The initial utility level for agent B.
+        equilibriums (list): A list of tuples, each containing (omega, p1, alloc_A, alloc_B), 
+                             representing equilibrium outcomes.
+        """
+        sns.set_theme(style="ticks")
+        fig, ax = plt.subplots(figsize=(6, 6))
+
+        # Plotting the initial endowment from Q1
+        ax.scatter(0.8, 0.3, color='black', label='Initial Endowment from Q1')
+
+        # Plotting all potential Pareto improvements
+        N = 75
+        for x1A in np.linspace(0, 1, N+1):
+            for x2A in np.linspace(0, 1, N+1):
+                if self.utility_A(x1A, x2A) >= initial_utility_A and self.utility_B(1 - x1A, 1 - x2A) >= initial_utility_B:
+                    ax.scatter(x1A, x2A, color='blue', s=1, alpha=0.2)  # Lighter dots for the background
+
+        # Overlaying the equilibrium outcomes from Q8
+        for omega, p1, alloc_A, alloc_B in equilibriums:
+            ax.scatter(*alloc_A, color='red', s=10, label='Equilibrium Allocations')  # Mark equilibriums in red
+
+        # Setting the limits and borders for the Edgeworth box
+        w1bar, w2bar = 1.0, 1.0
+        ax.plot([0, w1bar], [0, 0], lw=2, color='black')
+        ax.plot([0, w1bar], [w2bar, w2bar], lw=2, color='black')
+        ax.plot([0, 0], [0, w2bar], lw=2, color='black')
+        ax.plot([w1bar, w1bar], [0, w2bar], lw=2, color='black')
+
+        ax.set_xlim([-0.1, w1bar + 0.1])
+        ax.set_ylim([-0.1, w2bar + 0.1])
+
+        # Labels and Legend
+        ax.set_xlabel('$x_1^A$')
+        ax.set_ylabel('$x_2^A$')
+        handles, labels = ax.get_legend_handles_labels()
+        by_label = dict(zip(labels, handles))  # Remove duplicate labels
+        ax.legend(by_label.values(), by_label.keys(), frameon=True, loc='upper right', bbox_to_anchor=(1.6, 1.0))
+
+        plt.show()
