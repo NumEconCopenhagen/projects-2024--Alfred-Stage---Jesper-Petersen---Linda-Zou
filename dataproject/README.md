@@ -12,4 +12,4 @@ We apply the **following datasets**:
 
 yahoo finance stocks (we end up, incidentally, using two different APIs)
 
-**Dependencies:** Apart from a standard Anaconda Python 3 installation, the project shouldn't require any further installations other that installing yfinance writing "pip install yfinance" in your terminal. 
+**Dependencies:** Apart from a standard Anaconda Python 3 installation, the project shouldn't require any further installations other that installing yfinance writing "pip install yfinance" and "pip install yahoo_fin" in your terminal. 
