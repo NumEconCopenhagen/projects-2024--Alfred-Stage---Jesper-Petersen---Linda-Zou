@@ -6,7 +6,7 @@ We take a couple of approaches. First we import three different indexes and extr
 
 Then we look at the same problem, but from a different angle. Download historical data of a certain stock. Isolate negative movements > 5 pct. Trade with a "fractional kelly" stategy, that involves sizing out bets based on momentum. 
 
-The **results** of the project can be seen from running [DataProject.ipynb](DataProject.ipynb) using the pyfile trading_algo.
+The **results** of the project can be seen from running [DataProject.ipynb](DataProject.ipynb) using the pyfile [mean_reversion.py].
 
 We apply the **following datasets**:
 
