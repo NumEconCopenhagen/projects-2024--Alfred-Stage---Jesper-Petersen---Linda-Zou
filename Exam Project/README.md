@@ -1,1 +1,1 @@
-**INFO:**The Exam Project consists of a single notebook and 3 different classes. The classes are named after the questions. The solution uses only standard packages and need no additional installations to run. 
+**INFO:** The Exam Project consists of a single notebook and 3 different classes. The classes are named after the questions. The solution uses only standard packages and need no additional installations to run. 
