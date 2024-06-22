@@ -3,4 +3,4 @@
 
 
 **USE OF AI TOOLS:** 
-There have been used AI tools for debugging, complex functions, increasing effectiveness and to check if its results align with our results.
+There have been used AI tools for debugging, complex functions, increasing effectiveness and to check if its results align with our results. Even though AI often gave incorrect answers the tool has been used throughout the tasks assisting our own coding.
