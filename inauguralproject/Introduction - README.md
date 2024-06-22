@@ -14,4 +14,3 @@ The second problem simulates career choices of graduates based on economic model
 
 The Q2.py file serves as the main module for the project. It includes a class named CareerClass that encapsulates the career choice model. 
 
-Note: Everything should be able to run without any additional downloads of function packages
