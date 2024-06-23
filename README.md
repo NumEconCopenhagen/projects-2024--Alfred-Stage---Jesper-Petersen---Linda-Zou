@@ -16,4 +16,4 @@
    The project focuses on the Solow Model for a open economy. We have simulated the convergence to steady state and the underlying variables, and introduces shocks to the economy    in order to see how the economy develops differently during shocks.
 
 4. **Exam project:** <br>
-   The project features a Production Economy, a Career Choice Model, and a problem relating to Barycentric interpolation¶. All three are solved with classes using standard stuff (numpy, pandas etc.). 
+   The project features a Production Economy, a Career Choice Model, and a problem relating to Barycentric interpolation¶. All three are solved with classes using standard packages (numpy, pandas etc.). 
